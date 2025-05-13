@@ -82,3 +82,52 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 })
+ // Funções de ordenação diretamente no HTML para garantir que funcionem
+    function ordenarPorPreco() {
+      const categorias = document.getElementsByClassName("categoria");
+      
+      for (let i = 0; i < categorias.length; i++) {
+        const categoria = categorias[i];
+        const itens = categoria.getElementsByClassName("item");
+        
+        const sortedItens = Array.from(itens).sort((a, b) => {
+          // Extrai o preço do texto do item
+          const precoTextoA = a.textContent.match(/Preço: R\$ ([\d,.]+)/);
+          const precoTextoB = b.textContent.match(/Preço: R\$ ([\d,.]+)/);
+          
+          if (!precoTextoA || !precoTextoB) return 0;
+          
+          const precoA = parseFloat(precoTextoA[1].replace(".", "").replace(",", "."));
+          const precoB = parseFloat(precoTextoB[1].replace(".", "").replace(",", "."));
+          
+          return precoA - precoB;
+        });
+        
+        // Reinsere os itens ordenados
+        for (let j = 0; j < sortedItens.length; j++) {
+          categoria.appendChild(sortedItens[j]);
+        }
+      }
+    }
+    
+    function ordenarPorOrdemAlfabetica() {
+      const categorias = document.getElementsByClassName("categoria");
+      
+      for (let i = 0; i < categorias.length; i++) {
+        const categoria = categorias[i];
+        const itens = categoria.getElementsByClassName("item");
+        
+        const sortedItens = Array.from(itens).sort((a, b) => {
+          const textoA = a.querySelector("strong").textContent.toLowerCase();
+          const textoB = b.querySelector("strong").textContent.toLowerCase();
+          
+          return textoA.localeCompare(textoB);
+        });
+        
+        // Reinsere os itens ordenados
+        for (let j = 0; j < sortedItens.length; j++) {
+          categoria.appendChild(sortedItens[j]);
+        }
+      }
+    }
+    
