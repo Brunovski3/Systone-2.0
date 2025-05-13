@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M.D Mármores e Granitos</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="img/md3.ico" />
+</head>
+<body>
+  <header>
+    <div class="container header-content">
+      <div class="logo-container">
+        <img src="img/md3.ico" alt="Logo M.D Mármores e Granitos" class="logo">
+        <div>
+          <h1 class="site-title">M.D Mármores e Granitos</h1>
+          <p class="site-subtitle">Qualidade e excelência em pedras naturais</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="tabs">
+      <button class="tab active" data-tab="calculadora">Calculadora de Orçamento</button>
+      <button class="tab" data-tab="mostruario-tab">Mostruário</button>
+      <button class="tab" data-tab="conversor">Conversor de Valores</button>
+    </div>
+
+    <!-- Calculadora Tab -->
+    <div id="calculadora" class="tab-content active">
+      <div class="card">
+        <h2 class="card-title">Calculadora de Orçamento</h2>
+        <form id="calculadora-form">
+          <div class="form-row">
+            <div class="form-col">
+              <div class="form-group">
+                <label for="material">Material:</label>
+                <select id="material" class="form-control">
+                  <option value="Ardósia">Ardósia</option>
+                  <option value="Ardósia Bipolida">Ardósia Bipolida</option>
+                  <option value="Arabesco Samoa">Arabesco Samoa</option>
+                  <option value="Bege Prime">Bege Prime</option>
+                  <option value="Branco Dallas">Branco Dallas</option>
+                  <option value="Branco Paraná Claro">Branco Paraná Claro</option>
+                  <option value="Branco Paraná Escuro">Branco Paraná Escuro</option>
+                  <option value="Branco Prime">Branco Prime</option>
+                  <option value="Branco Siena">Branco Siena</option>
+                  <option value="Cinza Castelo">Cinza Castelo</option>
+                  <option value="Cinza Corumbá">Cinza Corumbá</option>
+                  <option value="Crema Marfil">Crema Marfil</option>
+                  <option value="Dolomitico Pegasus">Dolomitico Pegasus</option>
+                  <option value="Itaúnas">Itaúnas</option>
+                  <option value="Itaúnas Escovado">Itaúnas Escovado</option>
+                  <option value="Marrom Café">Marrom Café</option>
+                  <option value="Marrom Café Comercial">Marrom Café Comercial</option>
+                  <option value="Marrom Coral">Marrom Coral</option>
+                  <option value="Ocre Itabira">Ocre Itabira</option>
+                  <option value="Piracema">Piracema</option>
+                  <option value="Preto Absoluto">Preto Absoluto</option>
+                  <option value="Preto Escovado">Preto Escovado</option>
+                  <option value="Preto São Gabriel">Preto São Gabriel</option>
+                  <option value="Quartzo Branco">Quartzo Branco</option>
+                  <option value="Quartzo Cinza">Quartzo Cinza</option>
+                  <option value="Santa Cecília">Santa Cecília</option>
+                  <option value="Taj Mahal">Taj Mahal</option>
+                  <option value="Travertino">Travertino</option>
+                  <option value="Verde">Verde</option>
+                  <option value="Via Láctea">Via Láctea</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="acabamento">Acabamento:</label>
+                <select id="acabamento" class="form-control">
+                  <option value="Meia esquadria">Meia esquadria</option>
+                  <option value="Boleado">Boleado</option> 
+                  <option value="Reto">Reto</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-col">
+              <div class="form-group">
+                <label for="cubas">Cuba Inox/Porcelana:</label>
+                <select id="cubas" class="form-control">
+                  <option value="Sem Cuba">Sem Cuba</option>
+                  <option value="Corte da Cuba">Corte da Cuba</option>
+                  <option value="Corte Lixeira">Corte Lixeira</option>
+                  <option value="Corte Calha Úmida">Corte Calha Úmida</option>
+                  <option value="Corte da Cuba Gourmet">Corte da Cuba Gourmet</option>
+                  <option value="Corte da Chopeira">Corte da Chopeira</option>
+                  <option value="Cuba N¹46x30/14">Cuba N¹46x30/14</option>
+                  <option value="Cuba N¹46x30/17">Cuba N¹46x30/17</option>
+                  <option value="Cuba N²56x32/14">Cuba N²56x32/14</option>
+                  <option value="Cuba N²56x32/17">Cuba N²56x32/17</option>
+                  <option value="Cuba Oval Grande">Cuba Oval Grande</option>
+                  <option value="Cuba Oval Pequena">Cuba Oval Pequena</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="cooktop">Corte Cooktop:</label>
+                <select id="cooktop" class="form-control">
+                  <option value="Sem Corte">Sem Corte</option>
+                  <option value="Com Corte Cooktop">Com Corte Cooktop</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-col">
+              <div class="form-group">
+                <label for="comprimento-pia">Comprimento da pia (m):</label>
+                <input type="number" id="comprimento-pia" class="form-control" step="0.01" min="0">
+              </div>
+            </div>
+            <div class="form-col">
+              <div class="form-group">
+                <label for="largura-pia">Largura da pia (m):</label>
+                <input type="number" id="largura-pia" class="form-control" step="0.01" min="0">
+              </div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-col">
+              <div class="form-group">
+                <label for="largura-saia">Largura da saia (m):</label>
+                <input type="number" id="largura-saia" class="form-control" step="0.01" min="0">
+              </div>
+            </div>
+            <div class="form-col">
+              <div class="form-group">
+                <label for="largura-espelho">Largura do espelho (m):</label>
+                <input type="number" id="largura-espelho" class="form-control" step="0.01" min="0">
+              </div>
+            </div>
+          </div>
+
+          <div class="retangulo-container">
+            <h3 class="selecao-title">Visualização da Pia</h3>
+            <div class="retangulo">
+              <div class="lado superior"></div>
+              <div class="lado inferior"></div>
+              <div class="lado esquerda"></div>
+              <div class="lado direita"></div>
+              <div class="cuba"></div>
+            </div>
+
+            <div class="selecao-container">
+              <div class="retangulo-opcoes">
+                <h4 class="selecao-title">Acabamento</h4>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input checkbox-lado" data-lado="superior" id="saia-superior">
+                  <label class="form-check-label" for="saia-superior">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-square" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm8.5 9.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"/>
+                    </svg>
+                    Superior
+                  </label>
+                </div>
+
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input checkbox-lado" data-lado="inferior" id="saia-inferior">
+                  <label class="form-check-label" for="saia-inferior">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-square" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm8.5 2.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293z"/>
+                    </svg>
+                    Inferior
+                  </label>
+                </div>
+
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input checkbox-lado" data-lado="esquerda" id="saia-esquerda">
+                  <label class="form-check-label" for="saia-esquerda">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-square" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm11.5 5.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
+                    </svg>
+                    Esquerda
+                  </label>
+                </div>
+
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input checkbox-lado" data-lado="direita" id="saia-direita">
+                  <label class="form-check-label" for="saia-direita">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-square" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm4.5 5.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+                    </svg>
+                    Direita
+                  </label>
+                </div>
+              </div>
+
+              <div class="retangulo-opcoes-espelho">
+                <h4 class="selecao-title">Espelho</h4>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input checkbox-lado-espelho" data-lado="superior" id="espelho-superior">
+                  <label class="form-check-label" for="espelho-superior">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-square" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm8.5 9.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"/>
+                    </svg>
+                    Superior
+                  </label>
+                </div>
+
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input checkbox-lado-espelho" data-lado="inferior" id="espelho-inferior">
+                  <label class="form-check-label" for="espelho-inferior">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-square" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm8.5 2.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293z"/>
+                    </svg>
+                    Inferior
+                  </label>
+                </div>
+
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input checkbox-lado-espelho" data-lado="esquerda" id="espelho-esquerda">
+                  <label class="form-check-label" for="espelho-esquerda">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-square" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm11.5 5.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
+                    </svg>
+                    Esquerda
+                  </label>
+                </div>
+
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input checkbox-lado-espelho" data-lado="direita" id="espelho-direita">
+                  <label class="form-check-label" for="espelho-direita">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-square" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm4.5 5.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+                    </svg>
+                    Direita
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Campos ocultos para armazenar os lados selecionados -->
+          <div class="form-row">
+            <div class="form-col">
+              <div class="form-group">
+                <label for="lados-maiores-saia">Lados maiores da saia:</label>
+                <input type="number" id="lados-maiores-saia" class="form-control" readonly>
+              </div>
+              <div class="form-group">
+                <label for="lados-menores-saia">Lados menores da saia:</label>
+                <input type="number" id="lados-menores-saia" class="form-control" readonly>
+              </div>
+            </div>
+            <div class="form-col">
+              <div class="form-group">
+                <label for="lados-maiores-espelho">Lados maiores do espelho:</label>
+                <input type="number" id="lados-maiores-espelho" class="form-control" readonly>
+              </div>
+              <div class="form-group">
+                <label for="lados-menores-espelho">Lados menores do espelho:</label>
+                <input type="number" id="lados-menores-espelho" class="form-control" readonly>
+              </div>
+            </div>
+          </div>
+
+          <div class="btn-group">
+            <button type="button" id="limpar" class="btn btn-secondary">Limpar Seleções</button>
+            <button type="button" id="calcular" class="btn">Calcular Orçamento</button>
+          </div>
+        </form>
+
+        <div id="resultado" style="display: none;"></div>
+      </div>
+    </div>
+
+    <!-- Mostruário Tab -->
+    <div id="mostruario-tab" class="tab-content">
+      <div class="card">
+        <h2 class="card-title">Mostruário de Materiais e Opções</h2>
+        
+        <div class="btn-group">
+          <button type="button" onclick="ordenarPorOrdemAlfabetica()" class="btn btn-secondary">Ordenar por Nome</button>
+          <button type="button" onclick="ordenarPorPreco()" class="btn">Ordenar por Preço</button>
+        </div>
+        
+        <div id="mostruario">
+          <div class="categoria">
+            <h2 class="categoria-title">Materiais</h2>
+            <div class="item"><img src="img/Arabesco.jpg" alt="Arabesco Samoa"><div class="item-content"><strong>Arabesco Samoa</strong>Preço: R$ 290,00</div></div>
+            <div class="item"><img src="img/Ardosia.jpg" alt="Ardósia"><div class="item-content"><strong>Ardósia</strong>Preço: R$ 250,00</div></div>
+            <div class="item"><img src="img/Ardosia.jpg" alt="Ardósia Bipolida"><div class="item-content"><strong>Ardósia Bipolida</strong>Preço: R$ 270,00</div></div>
+            <div class="item"><img src="img/Bege_Prime.png" alt="Bege Prime"><div class="item-content"><strong>Bege Prime</strong>Preço: R$ 980,00</div></div>
+            <div class="item"><img src="img/Branco_Dallas.jpg" alt="Branco Dallas"><div class="item-content"><strong>Branco Dallas</strong>Preço: R$ 360,00</div></div>
+            <div class="item"><img src="img/Branco_Paraná_Claro.jpg" alt="Branco Paraná Claro"><div class="item-content"><strong>Branco Paraná Claro</strong>Preço: R$ 1450,00</div></div>
+            <div class="item"><img src="img/Branco_Paraná_Escuro.jpg" alt="Branco Paraná Escuro"><div class="item-content"><strong>Branco Paraná Escuro</strong>Preço: R$ 1400,00</div></div>
+            <div class="item"><img src="img/Bege_Prime.png" alt="Branco Prime"><div class="item-content"><strong>Branco Prime</strong>Preço: R$ 1000,00</div></div>
+            <div class="item"><img src="img/Branco_Siena.jpg" alt="Branco Siena"><div class="item-content"><strong>Branco Siena</strong>Preço: R$ 540,00</div></div>
+            <div class="item"><img src="img/Cinza_Castelo.jpeg" alt="Cinza Castelo"><div class="item-content"><strong>Cinza Castelo</strong>Preço: R$ 300,00</div></div>
+            <div class="item"><img src="img/Cinza_Andorinha.jpeg" alt="Cinza Andorinha"><div class="item-content"><strong>Cinza Andorinha</strong>Preço: R$ 325,00</div></div>
+            <div class="item"><img src="img/Cinza_Corumbá.jpg" alt="Cinza Corumbá"><div class="item-content"><strong>Cinza Corumbá</strong>Preço: R$ 330,00</div></div>
+            <div class="item"><img src="img/Crema_Marfil.jpeg" alt="Crema Marfil"><div class="item-content"><strong>Crema Marfil</strong>Preço: R$ 1400,00</div></div>
+            <div class="item"><img src="img/Crema_Marfil.jpeg" alt="Dolomitico Pegasus"><div class="item-content"><strong>Dolomitico Pegasus</strong>Preço: R$ 700,00</div></div>
+            <div class="item"><img src="img/Itaunas.jpeg" alt="Itaúnas"><div class="item-content"><strong>Itaúnas</strong>Preço: R$ 550,00</div></div>
+            <div class="item"><img src="img/Itaunas.jpeg" alt="Itaúnas Escovado"><div class="item-content"><strong>Itaúnas Escovado</strong>Preço: R$ 780,00</div></div>
+            <div class="item"><img src="img/Marrom_Café.jpg" alt="Marrom Café"><div class="item-content"><strong>Marrom Café</strong>Preço: R$ 620,00</div></div>
+            <div class="item"><img src="img/Marrom_Café.jpg" alt="Marrom Café Comercial"><div class="item-content"><strong>Marrom Café Comercial</strong>Preço: R$ 425,00</div></div>
+            <div class="item"><img src="img/Marrom_Tabaco.jpg" alt="Marrom Coral"><div class="item-content"><strong>Marrom Coral</strong>Preço: R$ 450,00</div></div>
+            <div class="item"><img src="img/Ocre_Itabira.jpeg" alt="Ocre Itabira"><div class="item-content"><strong>Ocre Itabira</strong>Preço: R$ 300,00</div></div>
+            <div class="item"><img src="img/Piracema.jpeg" alt="Piracema"><div class="item-content"><strong>Piracema</strong>Preço: R$ 600,00</div></div>
+            <div class="item"><img src="img/Preto_Absoluto.jpeg" alt="Preto Absoluto"><div class="item-content"><strong>Preto Absoluto</strong>Preço: R$ 1575,00</div></div>
+            <div class="item"><img src="img/Preto_Escovado.jpg" alt="Preto Escovado"><div class="item-content"><strong>Preto Escovado</strong>Preço: R$ 625,00</div></div>
+            <div class="item"><img src="img/Preto_São_Gabriel.jpeg" alt="Preto São Gabriel"><div class="item-content"><strong>Preto São Gabriel</strong>Preço: R$ 490,00</div></div>
+            <div class="item"><img src="img/Quartzo_Branco.jpg" alt="Quartzo Branco"><div class="item-content"><strong>Quartzo Branco</strong>Preço: R$ 1380,00</div></div>
+            <div class="item"><img src="img/Quartzo_Branco.jpg" alt="Quartzo Cinza"><div class="item-content"><strong>Quartzo Cinza</strong>Preço: R$ 1300,00</div></div>
+            <div class="item"><img src="img/Santa_Cecilia.jpg" alt="Santa Cecília"><div class="item-content"><strong>Santa Cecília</strong>Preço: R$ 380,00</div></div>
+            <div class="item"><img src="img/Taj Mahal.jpg" alt="Taj Mahal"><div class="item-content"><strong>Taj Mahal</strong>Preço: R$ 1900,00</div></div>
+            <div class="item"><img src="img/Travertino.jpeg" alt="Travertino"><div class="item-content"><strong>Travertino</strong>Preço: R$ 400,00</div></div>
+            <div class="item"><img src="img/Verde_Ubatuba.jpeg" alt="Verde"><div class="item-content"><strong>Verde</strong>Preço: R$ 360,00</div></div>
+            <div class="item"><img src="img/Via_Lactea.jpeg" alt="Via Láctea"><div class="item-content"><strong>Via Láctea</strong>Preço: R$ 625,00</div></div>
+          </div>
+          
+          <div class="categoria">
+            <h2 class="categoria-title">Acabamentos</h2>
+            <div class="item"><div class="item-content"><strong>Boleado</strong>Preço: R$ 70,00</div></div>
+            <div class="item"><div class="item-content"><strong>Reto</strong>Preço: R$ 50,00</div></div>
+            <div class="item"><div class="item-content"><strong>Meia esquadria</strong>Preço: R$ 85,00</div></div>
+          </div>
+          
+          <div class="categoria">
+            <h2 class="categoria-title">Cubas</h2>
+            <div class="item"><div class="item-content"><strong>Sem Cuba</strong>Preço: R$ 0,00</div></div>
+            <div class="item"><div class="item-content"><strong>Corte da Chopeira</strong>Preço: R$ 90,00</div></div>
+            <div class="item"><div class="item-content"><strong>Corte da Cuba</strong>Preço: R$ 90,00</div></div>
+            <div class="item"><div class="item-content"><strong>Corte Lixeira</strong>Preço: R$ 80,00</div></div>
+            <div class="item"><div class="item-content"><strong>Corte Calha úmida</strong>Preço: R$ 85,00</div></div>
+            <div class="item"><div class="item-content"><strong>Corte da Cuba Gourmet</strong>Preço: R$ 170,00</div></div>
+            <div class="item"><div class="item-content"><strong>Cuba N¹46x30/14</strong>Preço: R$ 215,00</div></div>
+            <div class="item"><div class="item-content"><strong>Cuba N¹46x30/17</strong>Preço: R$ 235,00</div></div>
+            <div class="item"><div class="item-content"><strong>Cuba N²56x32/14</strong>Preço: R$ 235,00</div></div>
+            <div class="item"><div class="item-content"><strong>Cuba N²56x32/17</strong>Preço: R$ 285,00</div></div>
+            <div class="item"><div class="item-content"><strong>Cuba Oval Grande</strong>Preço: R$ 150,00</div></div>
+            <div class="item"><div class="item-content"><strong>Cuba Oval Pequena</strong>Preço: R$ 100,00</div></div>
+          </div>
+          
+          <div class="categoria">
+            <h2 class="categoria-title">Cooktop</h2>
+            <div class="item"><div class="item-content"><strong>Sem Corte</strong>Preço: R$ 0,00</div></div>
+            <div class="item"><div class="item-content"><strong>Com Corte Cooktop</strong>Preço: R$ 60,00</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Conversor Tab -->
+    <div id="conversor" class="tab-content">
+      <div class="card">
+        <h2 class="card-title">Conversor de Número para Extenso</h2>
+        <div class="conversor-container">
+          <div class="conversor-input">
+            <input type="number" id="numero" class="form-control" min="0" max="999999999999" step="0.01" placeholder="Digite um valor (ex: 1250.75)" required>
+            <button onclick="converterParaExtenso()" class="btn">Converter</button>
+          </div>
+          <div id="resultado-cheque"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    // Funções de ordenação diretamente no HTML para garantir que funcionem
+    function ordenarPorPreco() {
+      const categorias = document.getElementsByClassName("categoria");
+      
+      for (let i = 0; i < categorias.length; i++) {
+        const categoria = categorias[i];
+        const itens = categoria.getElementsByClassName("item");
+        
+        const sortedItens = Array.from(itens).sort((a, b) => {
+          // Extrai o preço do texto do item
+          const precoTextoA = a.textContent.match(/Preço: R\$ ([\d,.]+)/);
+          const precoTextoB = b.textContent.match(/Preço: R\$ ([\d,.]+)/);
+          
+          if (!precoTextoA || !precoTextoB) return 0;
+          
+          const precoA = parseFloat(precoTextoA[1].replace(".", "").replace(",", "."));
+          const precoB = parseFloat(precoTextoB[1].replace(".", "").replace(",", "."));
+          
+          return precoA - precoB;
+        });
+        
+        // Reinsere os itens ordenados
+        for (let j = 0; j < sortedItens.length; j++) {
+          categoria.appendChild(sortedItens[j]);
+        }
+      }
+    }
+    
+    function ordenarPorOrdemAlfabetica() {
+      const categorias = document.getElementsByClassName("categoria");
+      
+      for (let i = 0; i < categorias.length; i++) {
+        const categoria = categorias[i];
+        const itens = categoria.getElementsByClassName("item");
+        
+        const sortedItens = Array.from(itens).sort((a, b) => {
+          const textoA = a.querySelector("strong").textContent.toLowerCase();
+          const textoB = b.querySelector("strong").textContent.toLowerCase();
+          
+          return textoA.localeCompare(textoB);
+        });
+        
+        // Reinsere os itens ordenados
+        for (let j = 0; j < sortedItens.length; j++) {
+          categoria.appendChild(sortedItens[j]);
+        }
+      }
+    }
+    
+    // Script para controlar as abas
+    document.addEventListener('DOMContentLoaded', function() {
+      const tabs = document.querySelectorAll('.tab');
+      const tabContents = document.querySelectorAll('.tab-content');
+      
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          const tabId = tab.getAttribute('data-tab');
+          
+          // Remove active class from all tabs and contents
+          tabs.forEach(t => t.classList.remove('active'));
+          tabContents.forEach(c => c.classList.remove('active'));
+          
+          // Add active class to current tab and content
+          tab.classList.add('active');
+          document.getElementById(tabId).classList.add('active');
+          
+          // Show mostruario if that tab is selected
+          if (tabId === 'mostruario-tab') {
+            document.getElementById('mostruario').style.display = 'grid';
+          }
+        });
+      });
+    });
+  </script>
+  <script src="calculadora.js"></script>
+  <script src="conversor.js"></script>
+</body>
+</html>

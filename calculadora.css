@@ -1,0 +1,205 @@
+/* Estilo do retângulo */
+.retangulo {
+  width: 380px;
+  height: 150px;
+  border: 3px solid black;
+  position: relative;
+  margin-bottom: 20px;
+  border-radius: 10px; /* Cantos arredondados */
+  box-shadow: 8px 7px 2px rgba(0, 0, 0, 0.1); /* Sombra */
+  transition: background-color 0.3s ease-out;
+}
+
+/* Estilo dos lados do retângulo */
+.lado {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(247, 240, 240, 0);
+  pointer-events: none;
+  box-sizing: border-box;
+}
+
+.lado.superior {
+  top: 0;
+}
+
+.lado.inferior {
+  bottom: 0;
+}
+
+.lado.esquerda,
+.lado.direita {
+  height: 100%;
+  width: 20px;
+}
+
+.lado.esquerda {
+  left: 0;
+}
+
+.lado.direita {
+  right: 0;
+}
+
+.lado-selecionado {
+  background-color: rgba(0, 128, 0, 0.5);
+}
+.linha-verde,
+.linha-azul {
+  background-color: rgba(0, 128, 0, 0.5);
+  height: 2px;
+}
+
+.linha-verde {
+  height: 20px;
+}
+
+.linha-azul {
+  height: 20px;
+}
+
+.lado-selecionado1 {
+  background-color: rgba(3, 38, 133, 0.5);
+}
+
+/* Estilo do formulário */
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  animation: slide-up 0.5s ease-out;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  animation: fade-in 0.5s ease-out;
+}
+
+input[type="number"],
+select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 1rem;
+  animation: fade-in 0.5s ease-out;
+}
+
+/* Estilo do botão */
+button {
+  padding: 0.5rem 1rem;
+  background-color: #0f8a20;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-out;
+  animation: fade-in 0.5s ease-out;
+}
+
+button:hover {
+  background-color: #0f8a20;
+}
+
+/* Estilo do resultado */
+#resultado {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  animation: fade-in 0.5s ease-out;
+}
+
+/*cabeçalho */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  animation: fade-in 0.5s ease-out;
+}
+
+/* Estilo da logo */
+.logo {
+  width: 120px;
+  height: 120px;
+  margin: auto;
+  margin-bottom: 30px;
+  animation: zoom-in 0.5s ease-out;
+  position: absolute;
+  top: 20px;
+  left: 15px;
+}
+
+/* Estilo do container do retângulo */
+.retangulo-container > div {
+  margin-top: 10px;
+}
+
+/* Estilo das opções do retângulo */
+.retangulo-opcoes {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  animation: fade-in 0.5s ease-out;
+}
+.retangulo-opcoes {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  animation: fade-in 0.5s ease-out;
+}
+
+/* Estilo da cuba */
+.cuba {
+  background-color: rgba(255, 0, 0, 0.5);
+  width: 58px;
+  height: 42px;
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Estilo do botão de limpar */
+#limpar {
+  background-color: #0f8a20;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-out;
+  margin-top: 10px;
+}
+
+#limpar:hover {
+  background-color: #0f8a20;
+}
+
+#limpar:focus {
+  outline: none;
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
